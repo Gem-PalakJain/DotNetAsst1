@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "ForgotPw";
+}
+
+<h1>Password Reset</h1>
+
+
+<form method="post" asp-controller="UserLogin" asp-action="Index">
+<div class="form-group">
+  <label class="form-label mt-4">Set Password</label>
+      <div class="form-floating mb-3 col-sm-3">
+    <input type="password" class="form-control" name="pw" id="password" placeholder="password">
+    <label for="password">Password</label>
+  </div>
+
+      <div class="form-floating mb-3 col-sm-3">
+    <input type="password" class="form-control" name="cpw" id="cpassword" placeholder="cpassword">
+    <label for="cpassword">Confirm Password</label>
+  </div>
+
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary col-sm-1">Submit</button> &nbsp;
+       <a asp-controller="UserLogin" asp-action="Index" class="btn btn-danger"> Cancel</a>
+            </div>
+
+</div>
+</form>

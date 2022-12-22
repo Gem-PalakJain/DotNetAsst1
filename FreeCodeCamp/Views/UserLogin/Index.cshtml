@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Login>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form method="post" asp-controller="Login" asp-action="Index">
+<div class="form-group">
+  <label class="form-label mt-4">Login</label>
+    <div class="form-floating mb-3 col-sm-3">
+    <input type="email" class="form-control" name="em" id="email" placeholder="name@example.com">
+    <label for="email">Email address</label>
+  </div>
+
+      <div class="form-floating mb-3 col-sm-3">
+    <input type="password" class="form-control" name="pw" id="password" placeholder="password">
+    <label for="password">Password</label>
+  </div>
+
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary col-sm-1">Login</button> &nbsp;
+       <a asp-controller="Login" asp-action="Create" class="btn btn-secondary">
+                <i class="bi bi-person-plus-fill"></i> &nbsp; Register
+            </a>
+       </div>
+
+<a asp-controller="EmailForPw" asp-action="Index" class="btn btn-link">Forgot Password </a>
+            </div>
+</form>
+@*@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }
+*@
+
